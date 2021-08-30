@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let string = prompt("Tên ngôi sao");
+  let index = 0;
+  let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus',];
+  let array2 = ['Ursa Minor', 'Taurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major', 'Leo'];
+  function findName(arr) {
+      for (let i = 0; i < arr.length; i++) {
+          if (string == arr[i]){
+              index = i;
+              return index;
+          }
+      }
+      return -1;
+  }
+  if (findName(array1) == -1){
+      alert("Không tìm thấy");
+  }
+  else{
+      alert(array2[findName(array1)]);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="alertCheck()">check</button>
+<script>
+   function check(n) {
+       let arrayCheck = [0,1,2,3,4,5,6,7,8,9];
+       for (let i = 0; i < arrayCheck.length; i++) {
+           if (n == arrayCheck[i]){
+               return true;
+           }
+       }
+   }
+   function alertCheck() {
+       let a = prompt("Nhập ký tự");
+       if (check(a)) {
+           alert("đây là ký tự số");
+       }
+       else {
+           alert("Đây không là ký tự số");
+       }
+   }
+</script>
+</body>
+</html>

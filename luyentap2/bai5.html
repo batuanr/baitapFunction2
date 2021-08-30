@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="returnMin()">check</button>
+<script>
+    function checkMin(a,b,c) {
+        let min = 0;
+        if (a<b && a<c){
+            min = a;
+            return min;
+        }
+        else{
+            if (b<a && b<c){
+                min = b;
+                return min;
+            }
+            else {
+                    min= c;
+                    return min;
+            }
+        }
+    }
+    function returnMin() {
+        let a = prompt("Nhập số thứ nhất");
+        let b = prompt("Nhập số thứ hai");
+        let c = prompt("Nhập số thứ ba");
+        a=parseInt(a);
+        b=parseInt(b);
+        c=parseInt(c);
+        alert(checkMin(a,b,c)+ " là số bé nhất");
+    }
+</script>
+</body>
+</html>
