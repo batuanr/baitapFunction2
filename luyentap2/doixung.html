@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">Nhập từ cần kiểm tra</label><br/>
+<input type="text" id="input">
+<button onclick="alertresult()">Check</button>
+<script>
+    function isPalindrome(){
+        let name = document.getElementById("input").value;
+        let first = 0;
+        let last = name.length-1;
+        for (let i = 0; i < name.length/2; i++) {
+            if (name[first]!=name[last]){
+                return false
+            }else{
+                first++;
+                last--;
+            }
+        }
+    }
+    function alertresult() {
+        if (isPalindrome()==false){
+            alert("false")
+        }
+        else{
+            alert("true")
+        }
+    }
+
+</script>
+</body>
+</html>
